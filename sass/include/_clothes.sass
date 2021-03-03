@@ -1,0 +1,58 @@
+.clothesBlock
+    background: linear-gradient(90deg, #F9F6F1 0%, #F9F6F1 50%, #F4F4F4 50%, #F4F4F4 100%)
+    padding-top: 50px
+    &__wrapp
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__woomenItemh, &__maleItemh
+        font-weight: 600
+        font-size: 24px
+        margin-bottom: 25px
+        text-transform: uppercase
+        span
+            font-weight: 400
+            margin-left: 5px
+    &__maleItemp, &__woomenItemp
+        font-size: 16px
+        margin-bottom: 25px
+    &__woomenbtn, &__malebtn
+        width: 80px
+        height: 30px
+        background: #D7B399
+        border: solid 1px #D7B399
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: .6s all
+        &:hover
+            background: #b49580
+            background: #b49580
+            cursor: pointer
+    &__male, &__woomen
+        display: flex
+        align-items: flex-end
+    &__male-image, &__woomen-image
+        max-width: 190px
+        img
+            width: 100%
+    &__woomen-items, &__male-items
+        padding-bottom: 40px
+
+.clothesGrid
+    display: grid
+    grid-template-columns: repeat(4, 280px)
+    grid-template-rows: repeat(2, 235px)
+    &__cards
+        position: relative
+        max-width: 280px
+        img
+            width: 100%
+        h2
+            position: absolute
+            bottom: 25px
+            left: 30px
+            font-weight: 300
+            font-size: 21px
+            letter-spacing: 0.03em
+            text-transform: uppercase

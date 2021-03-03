@@ -1,0 +1,113 @@
+.header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: 50px
+    &__links
+        display: flex
+        align-items: center
+    &__link
+        margin-left: 35px
+        transition: .6s all
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            bottom: -10px
+            left: 0
+            background: #D7B399
+            height: 2px
+            transition: .6s all
+            width: 0
+        &:hover::before
+            width: 100%
+        &:nth-child(1)
+            margin-left: 0
+    &__logo a
+        display: flex
+        align-items: center
+        transition: .6s all
+        img
+            transition: .6s all
+        span
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 24px
+            margin-left: 20px
+        &:hover
+            color: #D7B399
+        &:hover img
+            transform: rotate(360deg)
+    &__shopping
+        display: flex
+        align-items: center
+        margin-left: 100px
+        i
+            margin-right: 20px
+    &__bar-menu
+        display: none
+
+.shopping__shopInfo
+    background: #D7B399
+    width: 35px
+    height: 20px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #ffffff
+    font-size: 12px
+    font-weight: bold
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        background: #D7B399
+        left: -7px
+        transform: rotate(45deg)
+        width: 14px
+        height: 14px
+
+@media screen and ( max-width: 1030px )
+    .header
+        position: fixed
+        top: 0
+        right: 0
+        left: 0
+        background: rgba(215, 179, 153, 0.5)
+        padding-top: 25px
+        padding-bottom: 25px
+        color: #ffffff
+        z-index: 111
+        &__bar-menu
+            display: block
+        &__links
+            display: none
+        &__drop-menu
+            position: absolute
+            right: 0
+            left: 0
+            top: -700px
+            transition: .6s all
+            text-align: center
+            color: #fff
+            font-size: 22px
+            z-index: 11
+            background: rgb(215, 179, 153)
+            padding: 50px 20px
+            line-height: 100px
+        &__logo
+            position: relative
+            z-index: 999
+
+.hamburger.hamburger--collapse
+    position: relative
+    z-index: 999
+
+
+.active-menu
+    top: 105px
+
+.hamburger--collapse .hamburger-inner,
+.hamburger--collapse .hamburger-inner::after,
+.hamburger--collapse .hamburger-inner::before
+    background-color: #fff
